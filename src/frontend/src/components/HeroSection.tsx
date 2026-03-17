@@ -222,7 +222,7 @@ function FlyingRocket() {
           cx="34"
           cy="44"
           r="10"
-          fill="oklch(0.15 0.05 220)"
+          fill="oklch(0.92 0.015 220)"
           stroke="white"
           strokeWidth="2"
           strokeOpacity="0.6"

@@ -24,7 +24,7 @@ const projects = [
           width="360"
           height="260"
           rx="12"
-          fill="oklch(0.13 0.025 262)"
+          fill="oklch(0.94 0.01 255)"
           stroke="oklch(0.82 0.2 196 / 0.3)"
           strokeWidth="1"
         />
@@ -110,7 +110,7 @@ const projects = [
           width="70"
           height="30"
           rx="6"
-          fill="oklch(0.18 0.04 262)"
+          fill="oklch(0.9 0.015 255)"
         />
         <rect
           x="120"
@@ -118,7 +118,7 @@ const projects = [
           width="70"
           height="30"
           rx="6"
-          fill="oklch(0.18 0.04 262)"
+          fill="oklch(0.9 0.015 255)"
         />
         <rect
           x="200"
@@ -126,7 +126,7 @@ const projects = [
           width="70"
           height="30"
           rx="6"
-          fill="oklch(0.18 0.04 262)"
+          fill="oklch(0.9 0.015 255)"
         />
         <rect
           x="280"
@@ -134,14 +134,14 @@ const projects = [
           width="70"
           height="30"
           rx="6"
-          fill="oklch(0.18 0.04 262)"
+          fill="oklch(0.9 0.015 255)"
         />
         <line
           x1="40"
           y1="220"
           x2="360"
           y2="220"
-          stroke="oklch(0.22 0.04 262)"
+          stroke="oklch(0.85 0.02 262)"
           strokeWidth="1"
         />
       </svg>
@@ -167,7 +167,7 @@ const projects = [
           width="110"
           height="270"
           rx="18"
-          fill="oklch(0.13 0.025 262)"
+          fill="oklch(0.94 0.01 255)"
           stroke="oklch(0.7 0.24 312 / 0.5)"
           strokeWidth="1.5"
         />
@@ -177,7 +177,7 @@ const projects = [
           width="96"
           height="170"
           rx="6"
-          fill="oklch(0.09 0.018 262)"
+          fill="oklch(0.97 0.005 255)"
         />
         <circle
           cx="200"
@@ -192,7 +192,7 @@ const projects = [
           width="30"
           height="4"
           rx="2"
-          fill="oklch(0.22 0.04 262)"
+          fill="oklch(0.85 0.02 262)"
         />
         <rect
           x="158"
@@ -235,7 +235,7 @@ const projects = [
           width="84"
           height="40"
           rx="6"
-          fill="oklch(0.18 0.04 262)"
+          fill="oklch(0.9 0.015 255)"
         />
         <rect
           x="160"
@@ -243,7 +243,7 @@ const projects = [
           width="84"
           height="40"
           rx="6"
-          fill="oklch(0.18 0.04 262)"
+          fill="oklch(0.9 0.015 255)"
         />
         <circle
           cx="90"
@@ -350,7 +350,7 @@ const projects = [
           width="40"
           height="40"
           rx="8"
-          fill="oklch(0.13 0.025 262)"
+          fill="oklch(0.94 0.01 255)"
         />
         <rect
           x="194"
@@ -358,7 +358,7 @@ const projects = [
           width="40"
           height="40"
           rx="8"
-          fill="oklch(0.22 0.04 262)"
+          fill="oklch(0.85 0.02 262)"
         />
         <rect
           x="256"
@@ -548,7 +548,7 @@ function ProjectCard({
             className="absolute inset-0 flex flex-col justify-end p-6"
             style={{
               background:
-                "linear-gradient(to top, oklch(0.09 0.018 262 / 0.97) 0%, oklch(0.09 0.018 262 / 0.85) 50%, transparent 100%)",
+                "linear-gradient(to top, oklch(0.13 0.025 262 / 0.92) 0%, oklch(0.13 0.025 262 / 0.75) 50%, transparent 100%)",
             }}
           >
             <div>

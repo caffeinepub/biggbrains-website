@@ -1,4 +1,5 @@
 import AboutSection from "./components/AboutSection";
+import ClientsSection from "./components/ClientsSection";
 import ContactSection from "./components/ContactSection";
 import CustomCursor from "./components/CustomCursor";
 import FAQSection from "./components/FAQSection";
@@ -10,6 +11,7 @@ import Navbar from "./components/Navbar";
 import PortfolioSection from "./components/PortfolioSection";
 import ScrollProgressBar from "./components/ScrollProgressBar";
 import ServicesSection from "./components/ServicesSection";
+import ShowcaseSlides from "./components/ShowcaseSlides";
 import StatsSection from "./components/StatsSection";
 import TechMarquee from "./components/TechMarquee";
 import TestimonialsSection from "./components/TestimonialsSection";
@@ -23,12 +25,14 @@ export default function App() {
       <main>
         <HeroSection />
         <MarqueeBanner />
+        <ClientsSection />
         <TechMarquee />
         <ServicesSection />
         <StatsSection />
         <AboutSection />
         <HowItWorksSection />
         <PortfolioSection />
+        <ShowcaseSlides />
         <TestimonialsSection />
         <FAQSection />
         <ContactSection />

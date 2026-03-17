@@ -82,7 +82,7 @@ export default function ContactSection() {
                   />
                   <path
                     d="M60 20 C50 20 38 35 36 55 L36 110 L60 118 L84 110 L84 55 C82 35 70 20 60 20 Z"
-                    fill="oklch(0.18 0.04 262)"
+                    fill="oklch(0.9 0.015 255)"
                     stroke="oklch(0.82 0.2 196)"
                     strokeWidth="1.5"
                   />
