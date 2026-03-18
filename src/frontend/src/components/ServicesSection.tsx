@@ -26,7 +26,7 @@ const services = [
           rx="6"
           stroke="oklch(0.82 0.2 196)"
           strokeWidth="1.5"
-          fill="oklch(0.82 0.2 196 / 0.05)"
+          fill="oklch(0.82 0.2 196 / 0.08)"
         />
         <rect
           x="12"
@@ -34,7 +34,7 @@ const services = [
           width="20"
           height="16"
           rx="3"
-          fill="oklch(0.82 0.2 196 / 0.15)"
+          fill="oklch(0.82 0.2 196 / 0.2)"
           stroke="oklch(0.82 0.2 196)"
           strokeWidth="1"
         />
@@ -44,7 +44,7 @@ const services = [
           width="16"
           height="6"
           rx="2"
-          fill="oklch(0.82 0.2 196 / 0.3)"
+          fill="oklch(0.82 0.2 196 / 0.4)"
           className="animate-blink"
         />
         <rect
@@ -53,7 +53,7 @@ const services = [
           width="10"
           height="4"
           rx="2"
-          fill="oklch(0.82 0.2 196 / 0.2)"
+          fill="oklch(0.82 0.2 196 / 0.25)"
         />
         <rect
           x="12"
@@ -61,9 +61,9 @@ const services = [
           width="40"
           height="4"
           rx="2"
-          fill="oklch(0.82 0.2 196 / 0.15)"
+          fill="oklch(0.82 0.2 196 / 0.2)"
         />
-        <circle cx="32" cy="52" r="3" fill="oklch(0.82 0.2 196 / 0.4)" />
+        <circle cx="32" cy="52" r="3" fill="oklch(0.82 0.2 196 / 0.5)" />
       </svg>
     ),
   },
@@ -88,9 +88,9 @@ const services = [
           width="56"
           height="44"
           rx="6"
-          stroke="oklch(0.7 0.24 312)"
+          stroke="oklch(0.75 0.24 312)"
           strokeWidth="1.5"
-          fill="oklch(0.7 0.24 312 / 0.05)"
+          fill="oklch(0.75 0.24 312 / 0.08)"
         />
         <rect
           x="4"
@@ -98,14 +98,14 @@ const services = [
           width="56"
           height="10"
           rx="6"
-          fill="oklch(0.7 0.24 312 / 0.1)"
+          fill="oklch(0.75 0.24 312 / 0.15)"
         />
         <circle cx="14" cy="15" r="2.5" fill="oklch(0.62 0.22 25)" />
         <circle cx="22" cy="15" r="2.5" fill="oklch(0.72 0.2 60)" />
         <circle cx="30" cy="15" r="2.5" fill="oklch(0.78 0.18 162)" />
         <path
           d="M16 30 L22 36 L16 42"
-          stroke="oklch(0.7 0.24 312)"
+          stroke="oklch(0.75 0.24 312)"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -116,7 +116,7 @@ const services = [
           y1="42"
           x2="48"
           y2="42"
-          stroke="oklch(0.7 0.24 312 / 0.5)"
+          stroke="oklch(0.75 0.24 312 / 0.6)"
           strokeWidth="1.5"
           strokeLinecap="round"
         />
@@ -125,7 +125,7 @@ const services = [
           y1="34"
           x2="42"
           y2="34"
-          stroke="oklch(0.7 0.24 312 / 0.3)"
+          stroke="oklch(0.75 0.24 312 / 0.4)"
           strokeWidth="1.5"
           strokeLinecap="round"
         />
@@ -161,24 +161,42 @@ const services = [
           cx="32"
           cy="32"
           r="16"
-          stroke="oklch(0.82 0.2 196)"
-          strokeWidth="1"
-          fill="oklch(0.82 0.2 196 / 0.05)"
+          stroke="oklch(0.75 0.24 312)"
+          strokeWidth="1.5"
+          fill="oklch(0.75 0.24 312 / 0.08)"
         />
-        <path
-          d="M26 38 L32 22 L38 38 M28 34 H36"
+        <circle
+          cx="32"
+          cy="32"
+          r="6"
+          fill="oklch(0.82 0.2 196)"
+          className="animate-pulse-glow"
+        />
+        <line
+          x1="32"
+          y1="8"
+          x2="32"
+          y2="16"
           stroke="oklch(0.82 0.2 196)"
           strokeWidth="2"
           strokeLinecap="round"
-          strokeLinejoin="round"
+        />
+        <line
+          x1="56"
+          y1="32"
+          x2="48"
+          y2="32"
+          stroke="oklch(0.75 0.24 312)"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
       </svg>
     ),
   },
   {
     id: 4,
-    title: "Strategy",
-    desc: "Data-backed product strategy and roadmapping to ensure you build what actually matters.",
+    title: "Motion Design",
+    desc: "Purposeful animations and micro-interactions that guide users and delight at every step.",
     delay: 0.3,
     icon: (
       <svg
@@ -191,132 +209,199 @@ const services = [
         style={{ animationDelay: "1.2s" }}
       >
         <path
-          d="M12 48 L24 34 L34 40 L52 20"
-          stroke="oklch(0.7 0.24 312)"
+          d="M8 32 Q20 12 32 32 Q44 52 56 32"
+          stroke="oklch(0.82 0.2 196)"
           strokeWidth="2"
+          fill="none"
           strokeLinecap="round"
-          strokeLinejoin="round"
+          className="animate-draw-path"
         />
-        <circle
-          cx="12"
-          cy="48"
-          r="3"
-          fill="oklch(0.7 0.24 312)"
-          className="animate-blink"
-        />
-        <circle
-          cx="24"
-          cy="34"
-          r="3"
-          fill="oklch(0.7 0.24 312)"
-          className="animate-blink"
+        <path
+          d="M8 24 Q20 4 32 24 Q44 44 56 24"
+          stroke="oklch(0.75 0.24 312 / 0.6)"
+          strokeWidth="1.5"
+          fill="none"
+          strokeLinecap="round"
+          className="animate-draw-path"
           style={{ animationDelay: "0.3s" }}
         />
         <circle
-          cx="34"
-          cy="40"
-          r="3"
-          fill="oklch(0.7 0.24 312)"
-          className="animate-blink"
-          style={{ animationDelay: "0.6s" }}
+          cx="32"
+          cy="32"
+          r="4"
+          fill="oklch(0.82 0.2 196)"
+          className="animate-pulse-glow"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: 5,
+    title: "Strategy",
+    desc: "Research-backed product strategy and roadmapping that aligns design with business goals.",
+    delay: 0.4,
+    icon: (
+      <svg
+        aria-hidden="true"
+        width="64"
+        height="64"
+        viewBox="0 0 64 64"
+        fill="none"
+        className="animate-float"
+        style={{ animationDelay: "1.6s" }}
+      >
+        <rect
+          x="6"
+          y="6"
+          width="52"
+          height="52"
+          rx="8"
+          stroke="oklch(0.75 0.24 312)"
+          strokeWidth="1.5"
+          fill="oklch(0.75 0.24 312 / 0.06)"
+        />
+        <polyline
+          points="14,44 26,28 36,36 50,18"
+          stroke="oklch(0.82 0.2 196)"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="animate-draw-path"
         />
         <circle
-          cx="52"
-          cy="20"
-          r="3"
-          fill="oklch(0.7 0.24 312)"
+          cx="50"
+          cy="18"
+          r="4"
+          fill="oklch(0.82 0.2 196)"
           className="animate-blink"
-          style={{ animationDelay: "0.9s" }}
         />
-        <rect
-          x="4"
-          y="4"
-          width="56"
-          height="56"
-          rx="4"
-          stroke="oklch(0.7 0.24 312 / 0.15)"
-          strokeWidth="1"
+      </svg>
+    ),
+  },
+  {
+    id: 6,
+    title: "Accessibility",
+    desc: "Inclusive design patterns ensuring your product is usable by everyone, everywhere.",
+    delay: 0.5,
+    icon: (
+      <svg
+        aria-hidden="true"
+        width="64"
+        height="64"
+        viewBox="0 0 64 64"
+        fill="none"
+        className="animate-float"
+        style={{ animationDelay: "2s" }}
+      >
+        <circle
+          cx="32"
+          cy="12"
+          r="6"
+          fill="oklch(0.82 0.2 196 / 0.8)"
+          stroke="oklch(0.82 0.2 196)"
+          strokeWidth="1.5"
         />
         <line
-          x1="4"
-          y1="48"
-          x2="60"
-          y2="48"
-          stroke="oklch(0.7 0.24 312 / 0.2)"
-          strokeWidth="1"
+          x1="32"
+          y1="18"
+          x2="32"
+          y2="38"
+          stroke="oklch(0.82 0.2 196)"
+          strokeWidth="2.5"
+          strokeLinecap="round"
         />
         <line
-          x1="12"
-          y1="4"
-          x2="12"
-          y2="60"
-          stroke="oklch(0.7 0.24 312 / 0.2)"
-          strokeWidth="1"
+          x1="14"
+          y1="28"
+          x2="50"
+          y2="28"
+          stroke="oklch(0.75 0.24 312)"
+          strokeWidth="2"
+          strokeLinecap="round"
+          className="animate-blink"
+        />
+        <line
+          x1="32"
+          y1="38"
+          x2="20"
+          y2="54"
+          stroke="oklch(0.82 0.2 196)"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <line
+          x1="32"
+          y1="38"
+          x2="44"
+          y2="54"
+          stroke="oklch(0.82 0.2 196)"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
       </svg>
     ),
   },
 ];
 
-function TiltCard({
+function ServiceCard({
   service,
-  isVisible,
-}: { service: (typeof services)[0]; isVisible: boolean }) {
+}: {
+  service: (typeof services)[0];
+}) {
+  const [hovered, setHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
-  const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
-  const [isHovered, setIsHovered] = useState(false);
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
-    setTilt({ rotateX: (0.5 - y) * 16, rotateY: (x - 0.5) * 16 });
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    setTilt({ x: y * 8, y: x * -8 });
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+    setTilt({ x: 0, y: 0 });
   };
 
   return (
     <motion.div
       ref={cardRef}
       initial={{ opacity: 0, y: 40 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, delay: service.delay }}
-      data-ocid={`services.item.${service.id}`}
+      onMouseEnter={() => setHovered(true)}
       onMouseMove={handleMouseMove}
-      onMouseLeave={() => {
-        setIsHovered(false);
-        setTilt({ rotateX: 0, rotateY: 0 });
-      }}
-      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={handleMouseLeave}
       style={{
-        perspective: "800px",
-        transformStyle: "preserve-3d",
-        transform: `rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
-        transition: isHovered ? "transform 0.15s ease" : "transform 0.4s ease",
+        transform: `perspective(800px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
+        transition: hovered ? "transform 0.1s" : "transform 0.5s",
       }}
-      className="group relative p-6 rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/30 hover:bg-card overflow-hidden cursor-default"
+      className="relative group rounded-2xl p-6 bg-card border border-border/40 hover:border-primary/50 transition-all duration-300 overflow-hidden"
+      data-ocid="services.card"
     >
+      {/* Hover glow */}
       <div
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"
+        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle at 50% 0%, oklch(0.82 0.2 196 / 0.06), transparent 70%)",
+            "radial-gradient(ellipse at 50% 0%, oklch(0.72 0.2 196 / 0.12), transparent 70%)",
         }}
       />
-      <div
-        className="absolute inset-0 pointer-events-none rounded-2xl transition-opacity duration-300"
-        style={{
-          opacity: isHovered ? 0.6 : 0,
-          background: `radial-gradient(ellipse at ${50 + tilt.rotateY * 3}% ${50 - tilt.rotateX * 3}%, oklch(1 0 0 / 0.05), transparent 60%)`,
-        }}
-      />
-      <div className="mb-5 flex justify-center">{service.icon}</div>
-      <h3 className="font-display font-bold text-xl mb-2 group-hover:text-primary transition-colors">
-        {service.title}
-      </h3>
-      <p className="text-sm text-muted-foreground leading-relaxed">
-        {service.desc}
-      </p>
-      <div className="absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-primary to-accent transition-all duration-500" />
+      {/* Top accent line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      <div className="relative z-10">
+        <div className="mb-4">{service.icon}</div>
+        <h3 className="font-display font-bold text-xl mb-2 group-hover:text-primary transition-colors">
+          {service.title}
+        </h3>
+        <p className="text-muted-foreground text-sm leading-relaxed">
+          {service.desc}
+        </p>
+      </div>
     </motion.div>
   );
 }
@@ -325,37 +410,49 @@ export default function ServicesSection() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="services" className="py-28 relative overflow-hidden" ref={ref}>
-      <div className="absolute right-0 top-1/3 w-64 h-64 rounded-full bg-accent/8 blur-[80px] pointer-events-none" />
-      <div className="container mx-auto">
+    <section
+      id="services"
+      ref={ref}
+      className="py-28 relative overflow-hidden bg-gradient-to-b from-background via-card/30 to-background"
+    >
+      {/* Gradient top border line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+
+      {/* Ambient glow */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse, oklch(0.72 0.2 196 / 0.06), transparent 70%)",
+          filter: "blur(40px)",
+        }}
+      />
+
+      <div className="container mx-auto relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary text-sm font-semibold tracking-widest uppercase">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-4">
             What We Do
           </span>
           <RevealHeading
             as="h2"
+            className="font-display font-bold text-4xl md:text-5xl"
             isVisible={isVisible}
-            className="font-display font-bold text-4xl md:text-5xl mt-3 mb-4"
           >
-            Services that Scale
+            Our Services
           </RevealHeading>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            From pixel-perfect design to production-ready code, we cover every
-            layer of your digital product.
+          <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
+            End-to-end design and engineering for products people love.
           </p>
         </motion.div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
-            <TiltCard
-              key={service.id}
-              service={service}
-              isVisible={isVisible}
-            />
+            <ServiceCard key={service.id} service={service} />
           ))}
         </div>
       </div>

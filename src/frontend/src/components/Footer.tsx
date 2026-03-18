@@ -7,9 +7,27 @@ const caffeineUrl = `https://caffeine.ai?utm_source=caffeine-footer&utm_medium=r
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-border/40 py-12 overflow-hidden">
-      <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none" />
-      <div className="container mx-auto">
+    <footer
+      className="relative py-12 overflow-hidden"
+      style={{ background: "oklch(0.08 0.01 262)" }}
+    >
+      {/* Gradient top border */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+
+      {/* Grid bg overlay */}
+      <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
+
+      {/* Ambient glow */}
+      <div
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse, oklch(0.72 0.2 196 / 0.1), transparent 70%)",
+          filter: "blur(20px)",
+        }}
+      />
+
+      <div className="container mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <a
             href="#hero"
@@ -56,7 +74,7 @@ export default function Footer() {
                 key={label}
                 href={`#${label.toLowerCase().replace(/\s+/g, "-")}`}
                 data-ocid="footer.link"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 {label}
               </a>
@@ -76,7 +94,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-6 border-t border-border/30 text-center">
           <p className="text-xs text-muted-foreground/60">
-            The starting point for your next project. Minimal UI.
+            The starting point for your next project. Bold UI.
           </p>
         </div>
       </div>

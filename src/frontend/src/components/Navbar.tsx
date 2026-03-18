@@ -30,10 +30,19 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-background/90 backdrop-blur-xl border-b border-border/50 py-3"
-          : "bg-transparent py-5"
+        scrolled ? "py-3" : "bg-transparent py-5"
       }`}
+      style={
+        scrolled
+          ? {
+              background: "oklch(0.11 0.015 262 / 0.85)",
+              backdropFilter: "blur(24px)",
+              WebkitBackdropFilter: "blur(24px)",
+              borderBottom: "1px solid oklch(0.72 0.2 196 / 0.2)",
+              boxShadow: "0 1px 20px oklch(0.72 0.2 196 / 0.1)",
+            }
+          : undefined
+      }
     >
       <div className="container mx-auto flex items-center justify-between">
         <a
@@ -66,7 +75,7 @@ export default function Navbar() {
               <circle cx="18" cy="18" r="3" fill="oklch(0.82 0.2 196)" />
               <path
                 d="M18 10 L18 8 M26 18 L28 18 M18 26 L18 28 M10 18 L8 18"
-                stroke="oklch(0.7 0.24 312)"
+                stroke="oklch(0.75 0.24 312)"
                 strokeWidth="1.5"
                 strokeLinecap="round"
               />
@@ -86,7 +95,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 data-ocid="nav.link"
-                className={`px-4 py-2 text-sm font-medium transition-colors rounded-md hover:bg-muted/50 relative group ${
+                className={`px-4 py-2 text-sm font-medium transition-colors rounded-md hover:bg-primary/10 relative group ${
                   isActive
                     ? "text-primary"
                     : "text-muted-foreground hover:text-foreground"
@@ -108,33 +117,23 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <Button
-            variant="outline"
             size="sm"
-            className="border-primary/40 text-primary hover:bg-primary/10 hover:border-primary"
-            data-ocid="nav.secondary_button"
-            asChild
-          >
-            <a
-              href="https://biggbrains.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit Site
-            </a>
-          </Button>
-          <Button
-            size="sm"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow font-semibold"
             data-ocid="nav.primary_button"
-            asChild
+            className="glow-primary hover:scale-105 transition-transform"
+            onClick={() =>
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
-            <a href="#contact">Get Started</a>
+            Let&apos;s Talk
           </Button>
         </div>
 
+        {/* Mobile menu button */}
         <button
           type="button"
-          className="md:hidden p-2 rounded-md text-muted-foreground hover:text-foreground"
+          className="md:hidden p-2 rounded-md hover:bg-primary/10 transition-colors"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
           data-ocid="nav.toggle"
@@ -143,68 +142,46 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden bg-background/95 backdrop-blur-xl border-b border-border/50"
+            className="md:hidden overflow-hidden"
+            style={{
+              background: "oklch(0.1 0.015 262 / 0.98)",
+              backdropFilter: "blur(24px)",
+              borderBottom: "1px solid oklch(0.72 0.2 196 / 0.2)",
+            }}
           >
-            <div className="container mx-auto py-4 flex flex-col gap-1">
-              {navLinks.map((link) => {
-                const isActive = activeSection === link.id;
-                return (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    data-ocid="nav.link"
-                    className={`px-4 py-3 text-sm font-medium hover:bg-muted/50 rounded-md transition-colors ${
-                      isActive
-                        ? "text-primary"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                );
-              })}
-              <div className="pt-3 flex gap-3">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 border-primary/40 text-primary"
-                  data-ocid="nav.secondary_button"
-                  asChild
+            <nav className="container mx-auto py-4 flex flex-col gap-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  data-ocid="nav.link"
+                  className="px-4 py-3 text-sm font-medium rounded-md hover:bg-primary/10 hover:text-primary transition-colors"
+                  onClick={() => setMenuOpen(false)}
                 >
-                  <a
-                    href="https://biggbrains.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Visit Site
-                  </a>
-                </Button>
-                <Button
-                  size="sm"
-                  className="flex-1 bg-primary text-primary-foreground"
-                  data-ocid="nav.primary_button"
-                  asChild
-                >
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setMenuOpen(false);
-                      window.location.hash = "contact";
-                    }}
-                  >
-                    Get Started
-                  </button>
-                </Button>
-              </div>
-            </div>
+                  {link.label}
+                </a>
+              ))}
+              <Button
+                className="mt-2 glow-primary"
+                data-ocid="nav.primary_button"
+                onClick={() => {
+                  setMenuOpen(false);
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Let&apos;s Talk
+              </Button>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
